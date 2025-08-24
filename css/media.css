@@ -1,15 +1,29 @@
 .header {
-    display: none ;
+    display: block;
+}
+
+.hero {
+    display: block;
 }
 
 .main {
-    display: none ;
+    display: block;
 }
 
 .footer {
-    display: none;
+    display: block;
 }
 
-@media screen and (max-width: 1200px) {
-   
+@media (max-width: 800px) {
+     .nav .account {
+        display: none;
+     }  
+
+     .nav-button {
+        display: block;
+     }
+
+     .mobile-nav {
+        display: flex;
+     }
 }

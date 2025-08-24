@@ -18,7 +18,7 @@ body {
 /* BASE */
 
 .container-wide {
-  max-width: 1600px; 
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -76,7 +76,7 @@ body {
 .nav a::after {
   position: absolute;
   left: 0;
-  bottom: -5x;
+  bottom: -5px;
   display: block;
   content: "";
   width: 100%;
@@ -90,8 +90,84 @@ body {
 }
 
 .nav a:hover::after {
-  bottom: 0x;
+  bottom: 0;
   opacity: 1;
+}
+
+.nav-button {
+  display: none;
+  position: relative;
+  z-index: 9;
+  height: 25px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+}
+
+.nav-button-icon {
+  display: block;
+  position: relative;
+  background-color: #fff;
+  width: 42px;
+  height: 5px;
+  border: none;
+}
+
+.nav-button-icon::before {
+  position: absolute;
+  left: 0;
+  top: -10px;
+  content: "";
+  display: block;
+  width: 42px;
+  height: 5px;
+  background-color: #fff;
+}
+
+.nav-button-icon::after {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  content: "";
+  display: block;
+  width: 42px;
+  height: 5px;
+  background-color: #fff;
+}
+
+.mobile-nav {
+  position: fixed;
+  padding: 70px 70px 50px 30px;
+  top: 0;
+  right: 0;
+
+
+  display: none;  
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 320px;
+  height: 100%;
+
+  background-color: #0b1d26;
+  opacity: 0.8;
+}
+
+.mobile-nav .nav,
+.mobile-nav .account {
+  display: block;
+}
+
+
+.mobile-nav .nav ul {
+  flex-direction: column;
+}
+
+.mobile-nav .nav ul li {
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 .account {
